@@ -282,7 +282,6 @@ input:focus, textarea:focus {
 	.buscador {
 		margin-bottom: 20px;
 		margin-left: 0;
-		border:1px solid red;
 	}
 	.but1 {
 		margin-top: 5px;
@@ -355,7 +354,7 @@ input:focus, textarea:focus {
 	}
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
 	/*portada*/
 	.logo {
  		max-width: 100%;
@@ -412,17 +411,21 @@ input:focus, textarea:focus {
 		height: 266px;
 		width: 200px;
 		float: none;
-		padding-left: 40px;
 		position: static;
+		margin: 0 40px;
 	}
 	.contenedor1, .contenedor2 {
 		text-align: center;
 		padding: 0;
 		margin: 0;
+		width: 100%;
+	}
+	.cocteles ol {
+		font-size: 18px;
 	}
 	.coctel h3 {
 		text-align: center;
-		font-size: 24px;
+		font-size: 34px;
 		margin: 10px;
 	}
 	.contenedor1 ol {
@@ -434,7 +437,7 @@ input:focus, textarea:focus {
 		float: none;
 		position: static;
 		width: 200px;
-		padding-left: 40px;
+		margin: 0 40px;
 	}
 	.ccs {
 		list-style: none;
