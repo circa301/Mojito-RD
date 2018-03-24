@@ -131,6 +131,10 @@ input:focus, textarea:focus {
   color: #273b47;
 }
 
+.cocteles.contenedor {
+	margin-left: 0px;
+}
+
 .cocteles h2 {
 	font-size: 35px;
 	margin-left: 120px;
@@ -146,7 +150,7 @@ input:focus, textarea:focus {
 	border:2px solid #273b47;
 	border-radius: 15px;
 	overflow: hidden;
-	width: 800px;
+	width: 50%;
 	margin: auto;
 	margin-bottom: 30px;
 	background-color: white;
@@ -161,22 +165,24 @@ input:focus, textarea:focus {
 .coctel1  {
 	float: right;
 	position: relative;
-  right: 85px;
+ 	right: 85px;
+ 	border-radius: 25%;
 }
 .coctel2  {
 	float: left;
 	position: relative;
-  left: 60px;
+  	left: 60px;
+  	border-radius: 25%;
 }
 
 .contenedor1 {
-	padding-left: 20px;
-	margin-left: 80px;
-  margin-top: 25px;
+	margin: 80px;
+	width: 30%;
 }
 
 .contenedor2 {
-	margin-left: 330px;
+	margin-left: 50%;
+	margin-top: 10%;
 	}
 
 .ccs {
@@ -197,7 +203,6 @@ input:focus, textarea:focus {
 	display: flex;
 	width: 400px;
 	flex-wrap: wrap;
-	align-items: center;
 }
 
 .contacto strong {
@@ -216,10 +221,8 @@ input:focus, textarea:focus {
 
 .footer .contenedor {
 	display: flex;
-	justify-content: space-between;
-	max-width: 950px;
-	margin: auto;
-	padding-left: 35px;
+	justify-content: space-around;
+	margin: auto 20px;
 }
 
 .formulario {
@@ -243,7 +246,7 @@ input:focus, textarea:focus {
 }
 
 .col1 {
-	margin-right: 20px;
+	margin-right: 15px;
 }
 
 .col2 {
@@ -264,20 +267,22 @@ input:focus, textarea:focus {
 	display: flex;
 }
 
-@media screen and (max-width: 1130px) {
+@media screen and (max-width: 1160px) {
 	/*Portada*/
 	.logo {
-		width: auto;
-		margin: 0;
+		width: 100%;
+		margin: auto;
 	}
 	.header {
-		width: 807px;
+		width: 100%;
 		position: static;
 		padding-left: 5px;
+		text-align: center;
 	}
 	.buscador {
 		margin-bottom: 20px;
 		margin-left: 0;
+		border:1px solid red;
 	}
 	.but1 {
 		margin-top: 5px;
@@ -285,7 +290,7 @@ input:focus, textarea:focus {
 	/*Portada*/
 	/*Background*/
 	.background {
-		width: 807px;
+		max-width: 100%;
 	}
 	.titulo {
 		font-size: 45px;
@@ -304,56 +309,74 @@ input:focus, textarea:focus {
 	/*background*/
 	/*Cocteles*/
 	.contenedor {
-		max-width: 800px;
-		width: auto;
+		max-width: 100%;
 	}
 	.cocteles h2 {
 		margin-left: 200px;
 	}
+	.coctel h3{
+		font-size: 40px;
+		text-align: center;
+	}
+	.cocteles ol{
+		font-size: 20px;
+	}
 	/*Cocteles*/
 	/*Footer*/
 	.footer {
-		width: 807px;
+		max-width: 100%;
 	}
 	.contacto {
-		width: 300px;
+		max-width: 100%;
 		margin-left: 0px;
+		margin-right: 20px;
+		text-align: center;
+		align-content: center;
 	}
 	.contacto img {
-		max-width: 300px;
+		max-width: 100%;
+		margin: auto;
 	}
 	.coctel {
 		width: 680px;
 	}
 	.formulario {
-		width: 400px;
-		margin-right: 35px;
+		max-width: 100%;
 	}
 	/*Footer*/
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 810px) {
+	.header {
+		width: 100%;
+	}
+	.menu li {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 360px) {
 	/*portada*/
 	.logo {
- 		width: 380px;
+ 		max-width: 100%;
  	}
  	.header {
- 		width: 380px;
+ 		width: 97%;
  	}
  	.menu ul {
  		padding: 0;
-	 }
+	}
  	.menu li {
 	 	padding-bottom: 3px;
  		border-bottom: 1px solid wheat;
  		text-align: center;
 	 	display: block;
-	 }
+	 	width: 100%;
+	}
  	/*portada*/
  	/*Background*/
  	.background {
- 		width: 380px;
- 		background-size: 380px;
+ 		max-width: 100%;
  	}
  	.contenedor {
  		margin-left: 20px;
@@ -384,7 +407,6 @@ input:focus, textarea:focus {
 	.coctel {
 		width: 280px;
 		font-size: 14px;
-
 	}
 	.coctel1 {
 		height: 266px;
@@ -422,20 +444,19 @@ input:focus, textarea:focus {
 	/*Cocteles*/
 	/*Footer*/
 	.footer {
-		width: 380px;
+		max-width: 100%;
 	}
 	.footer .contenedor {
 		padding-left: 0;
 		display: block;
-		width: 380px;
+		max-width: 100%;
 	}
 	.contacto {
 		margin: 0 auto;
 	}
 	.formulario {
 		display: block;
-		width: 380px;
-		margin: 0 40px;
+		max-width: 100%;
 	}
 	.col1 .col2 {
 		margin: 0 40px;
@@ -451,6 +472,6 @@ input:focus, textarea:focus {
 	}
 	.col2 textarea {
 		padding-right: 60px;
-
 	}
+	/*footer*/
 }
