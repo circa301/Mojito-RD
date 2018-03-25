@@ -5,12 +5,14 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 </head>
 <body>
 	<section class="portada">
 		<img src="imagenes/logo2.jpg" class="logo">
+		<span class="burguermenu icon-menu1" id="hamburguesa"> </span>
 		<header class="header">
-			<nav class="menu">
+			<nav class="menu" id="menu">
 				<ul>
 					<li>
 						<a href="index.html">Inicio</a>
@@ -115,5 +117,12 @@
 	</form>			
 	</div>
 	</footer>
+	<script>
+		var $hamburguesa= document.getElementById("hamburguesa");
+		var $menu = document.getElementById("menu");
+		$hamburguesa.addEventListener("touchstart", function(){
+			$menu.classList.toggle("active")
+		});
+	</script>
 </body>
 </html>
