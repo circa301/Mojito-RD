@@ -263,6 +263,7 @@ input:focus, textarea:focus {
 .contacto {
 	display: flex;
 	width: 400px;
+	height: 240px;
 	flex-wrap: wrap;
 }
 
@@ -317,6 +318,9 @@ input:focus, textarea:focus {
 
 .col2 .button {
 	margin-top: 15px;
+}
+.intereses {
+	width: 260px;
 }
 
 .intereses label {
@@ -517,7 +521,8 @@ input:focus, textarea:focus {
 		width: 100px;
 		float: none;
 		position: static;
-		margin: 0 42px;
+		margin: auto;
+		display: block;
 	}
 	.contenedor1, .contenedor2 {
 		text-align: center;
@@ -542,7 +547,8 @@ input:focus, textarea:focus {
 		float: none;
 		position: static;
 		width: 100px;
-		margin: 0 42px;
+		display: block;
+		margin: auto;
 	}
 	.ccs {
 		list-style: none;
@@ -583,6 +589,6 @@ input:focus, textarea:focus {
 		margin-top: 0;
 		align-items: stretch;
 	}
-	
+
 	/*footer*/
 }
