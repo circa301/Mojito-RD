@@ -148,7 +148,7 @@
 
 		var $body = document.body;
 
-		var gestos = new Hammer()
+		var gestos = new Hammer($body);
 		gestos.on("swiperigth", showmenu)
 		gestos.on("swipeleft", hidemenu)
 		
