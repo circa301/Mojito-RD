@@ -5,12 +5,11 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Indie+Flower|Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>                           
 </head>
 <body>
 	<section class="portada">
 		<img src="imagenes/logo2.jpg" class="logo">
-		<span class="burguermenu icon-menu1" id="hamburguesa"> </span>
 		<header class="header">
 			<nav class="menu" id="menu">
 				<ul>
@@ -21,20 +20,21 @@
 						<a href="">Restaurante</a>
 					</li>
 					<li>
-						<a href="index.html#Cocteles">Bar</a>
+						<a href="recetas.html">Bar</a>
 					</li>
 					<li>
 						<a href="">Eventos</a>
 					</li>
 					<li>
-						<a href="recetas.html">Reservas</a>
+						<a href="">Reservas</a>
 					</li>
 					<li>
-						<a href="precios.html">Galeria</a>
+						<a href="">Galeria</a>
 					</li>
 				</ul>
 			</nav>
 			<div class="buscador">
+				<span class="burguermenu icon-menu1" id="hamburguesa"> </span>
 				<textarea name="buscador" id="buscador" cols="15" rows="1"></textarea>
 			<input type="submit" value="Buscar" class="but1"/>
 			</div>			
@@ -50,7 +50,7 @@
 	<section id="cocteles" class="cocteles contenedor"><!-- Cocteles-->
 		<h2>Nuestros Cocteles</h2><!-- titulo -->
 		<article class="coctel"> <!-- coctel 1 -->
-			<img class="coctel1" src="imagenes/luna.jpg" width="250" alt="Luna Azul">
+			<img class="coctel1" data-src="imagenes/luna.jpg" width="250" alt="Luna Azul">
 			<div class="contenedor1">
 				<h3>Luna Azul</h3>
 				<ol>
@@ -61,7 +61,7 @@
 			</div>
 		</article>
 		<article class="coctel "> <!-- coctel 2 -->
-			<img class="coctel2" src="imagenes/coffe.jpg" width="250" alt="Coffe Cherry Shot">
+			<img class="coctel2" data-src="imagenes/coffe.jpg" width="250" alt="Coffe Cherry Shot">
 			<div class="contenedor2">
 				<h3>Coffe Cherry Shot</h3>
 				<ol class="ccs">
@@ -75,9 +75,9 @@
 	<footer class="footer">
 	<div class="contenedor">
 	<div class="contacto">
-		<img src="imagenes/logo2.jpg" alt="Logotipo blanco" width="400" height="100">
-		<a href="tel:+573228079988"><strong>Telefono</strong> <samp>3228079988</samp></a>
-		<a href="mailto:risc301@gmail.com"><strong>E-mail</strong> <samp>risc301@gmail.com</samp></a>
+		<img data-src="imagenes/logo2.jpg" alt="Logotipo" width="400" height="100">
+		<a href="tel:+573228079988"><strong class="icon-mobile">Telefono</strong> <samp>3208234548</samp></a>
+		<a href="mailto:risc301@gmail.com"><strong class="icon-carta">E-mail</strong> <samp>risc301@gmail.com</samp></a>
 	</div>
 	<form class="formulario">
 		<div class="col1">
@@ -117,11 +117,19 @@
 	</form>			
 	</div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js" ></script>
 	<script>
 		var $hamburguesa= document.getElementById("hamburguesa");
 		var $menu = document.getElementById("menu");
-		$hamburguesa.addEventListener("touchstart", function(){
-			$menu.classList.toggle("active")
+		$hamburguesa.addEventListener("touchstart", togglemenu);
+
+		function togglemenu(){
+			$menu.classList.toggle("active");
+			$hamburguesa.classList.toggle("icon-cancel");
+		}
+		// Lazy Loading
+		var bLazy = new Blazy({
+    	selector: 'img'
 		});
 	</script>
 </body>
