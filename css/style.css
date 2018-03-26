@@ -320,7 +320,7 @@ input:focus, textarea:focus {
 }
 
 .intereses label {
-	font-size: 14px;
+	font-size: 18px;
 }
 
 .cont {
@@ -571,6 +571,7 @@ input:focus, textarea:focus {
 	}
 	.col1 {
 		margin-right: 0px;
+		font-size: 18px;
 	}
 	.col1 input {
 		zoom: 1.5;
@@ -580,6 +581,7 @@ input:focus, textarea:focus {
 	}		
 	.col2 {
 		margin-top: 0;
+		align-items: stretch;
 	}
 	/*footer*/
 }
