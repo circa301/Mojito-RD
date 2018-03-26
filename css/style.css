@@ -259,11 +259,16 @@ input:focus, textarea:focus {
 	display: block;
 	padding-top: 50px;
 }
+.redes {
+	display: inline-block;
+	width: 100%;
+	margin-top: 20px;
+}
 
 .contacto {
 	display: flex;
 	width: 400px;
-	height: 240px;
+	height: auto;
 	flex-wrap: wrap;
 }
 
@@ -280,7 +285,16 @@ input:focus, textarea:focus {
 	padding-top: 25px;
 	padding-bottom: 25px;
 }
-
+.contacto .icon-instagram {
+	font-size: 35px;
+	padding: 0;
+	margin: 40px;
+}
+.contacto .icon-facebook {
+	font-size: 35px;
+	padding: 0;
+	margin: 40px;
+}
 .footer .contenedor {
 	display: flex;
 	justify-content: space-around;
@@ -452,7 +466,6 @@ input:focus, textarea:focus {
  		display: block;
  	}
  	.menu {
- 		border: 1px solid wheat;
  		background: rgba(245, 222, 179, .8);
  		position: absolute;
  		width: 100%;
@@ -567,6 +580,20 @@ input:focus, textarea:focus {
 	}
 	.contacto {
 		margin: 0 auto;
+	}
+	.contacto a {
+		width: 100%;
+		font-size: 23px;
+	}
+	.redes {
+		display: inline-block;
+		width: 100%;
+		margin-top: 20px;
+	}
+	.redes a {
+		font-size: 35px;
+		padding: 0;
+		margin: 10px;
 	}
 	.formulario {
 		display: block;
