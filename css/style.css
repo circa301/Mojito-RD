@@ -91,7 +91,7 @@ table, th ,td {
 input, textarea {
 	outline: 0;
 	margin: auto 10px;
-	font-size: 18px;
+	font-size: 13px;
 }
 
 input:focus, textarea:focus {
@@ -163,7 +163,10 @@ input:focus, textarea:focus {
 .buscador {
 	text-align: center;
 }
-
+.buscador textarea {
+	font-size: 18px;
+	margin: 0 10px;
+}
 .but1 {
 	border-radius: 5px;
 	border: none;
@@ -261,8 +264,11 @@ input:focus, textarea:focus {
 }
 .redes {
 	display: inline-block;
-	width: 100%;
+	width: 75%;
+	margin: auto;
 	margin-top: 20px;
+	margin-bottom: 20px;
+
 }
 
 .contacto {
@@ -281,19 +287,22 @@ input:focus, textarea:focus {
 	font-size: 20px;
 	color: white;
 	text-decoration:none;
-	margin: auto;
+	text-align: center;: 
 	padding-top: 25px;
 	padding-bottom: 25px;
+	margin: auto;
 }
 .contacto .icon-instagram {
 	font-size: 35px;
 	padding: 0;
-	margin: 40px;
+	margin: 0 50px;
+	float: left;
 }
 .contacto .icon-facebook {
 	font-size: 35px;
 	padding: 0;
-	margin: 40px;
+	margin: 0 50px;
+	float: right;
 }
 .footer .contenedor {
 	display: flex;
@@ -357,6 +366,7 @@ input:focus, textarea:focus {
 	 border-radius:50%;
 	 display: none;
 	 text-align: center;
+	 position: fixed;
 }
 
 @media screen and (max-width: 1160px) {
@@ -439,25 +449,35 @@ input:focus, textarea:focus {
 
 @media screen and (max-width: 810px) {
 	.header {
-		width: 100%;
+		width: 99%;
 	}
 	.menu li {
 		font-size: 18px;
+	}
+	input, textarea {
+		margin: 0;
 	}
 }
 
 @media screen and (max-width: 380px) {
 	/*portada*/
+	.opened {
+		overflow: hidden;
+	}
 	.logo {
  		max-width: 100%;
  	}
  	.header {
  		width: 97%;
  		margin: 20px 0;
+ 		padding: 0;
  	}
  	.buscador {
  		margin: auto;
  		display: inline-flex;
+ 	}
+ 	.buscador textarea {
+ 		margin-left: 42px;
  	}
  	.but1 {
  		margin: 0;
@@ -467,7 +487,7 @@ input:focus, textarea:focus {
  	}
  	.menu {
  		background: rgba(245, 222, 179, .8);
- 		position: absolute;
+ 		position: fixed;
  		width: 100%;
  		left: -100%;
  		top: 0;
@@ -595,6 +615,12 @@ input:focus, textarea:focus {
 		padding: 0;
 		margin: 10px;
 	}
+	.contacto .icon-facebook {
+		float: none;
+	}
+	.contacto .icon-instagram {
+		float: none;
+	}
 	.formulario {
 		display: block;
 		max-width: 100%;
@@ -618,4 +644,13 @@ input:focus, textarea:focus {
 	}
 
 	/*footer*/
+}
+
+@media screen and (max-width: 320px) {
+	.contacto .icon-facebook {
+		margin: 0 15px;
+	}
+	.contacto .icon-instagram{
+		margin: 0 15px;
+	}
 }

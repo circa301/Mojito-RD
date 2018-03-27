@@ -127,26 +127,29 @@
 		var $hamburguesa= document.getElementById("hamburguesa");
 		var $menu = document.getElementById("menu");
 		$hamburguesa.addEventListener("touchstart", togglemenu);
+		var $body = document.body;
 
 		function togglemenu(){
 			$menu.classList.toggle("active");
 			$hamburguesa.classList.toggle("icon-cancel");
+			$body.classList.toggle("opened");
 		}
 		function showmenu(){
 			$menu.classList.add("active");
 			$hamburguesa.classList.add("icon-cancel");
+			$body.classList.add("opened");
+
 		}
 		function hidemenu(){
 			$menu.classList.remove("active");
 			$hamburguesa.classList.remove("icon-cancel");
+			$body.classList.remove("opened");
 		}
 
 		// Lazy Loading
 		var bLazy = new Blazy({
     	selector: 'img'
 		});
-
-		var $body = document.body;
 
 		var gestos = new Hammer($body);
 		gestos.on("swiperight", showmenu)
